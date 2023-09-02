@@ -45,6 +45,9 @@ let monthlySpent = annualSalary/12;
      totalSpent += Number(monthlySpent);
   $('#monthlyTotal').text(Math.round(totalSpent));
 
+  if(totalSpent >= 20000){
+    $('#monthlyTotal').css('background-color', 'red');
+  }
 
 }
 
