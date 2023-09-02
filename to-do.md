@@ -18,19 +18,20 @@ Take inputs from -employee first name, last name, ID number, job title, annual s
 -Update Total Monthly Cost section when employee is removed
 
 
--[] Make files
--[] link files
--[] set up HTML
--[] create form
--[] add submit button
-    -[] add jQuery inputs to the HTML
-    -[] take in employee data
+-[x] Make files
+-[x] link files
+-[x] set up HTML
+-[x] create form
+-[x] add submit button
+    -[x] add jQuery inputs to the HTML
+    -[x] take in employee data
     -[] calculate monthly costs
     -[] add data to DOM
-    -[] clear the input boxes
+    -[x] clear the input boxes
     -[] red backgroud if over $20,000 dollars
--[] add delete button to employee info
-    -remove THAT employee from the DOM
+-[x] add delete button to employee info
+    -[] remove employee from the DOM
+    
 
     ~~~~~~~~~*Stretch Goals*~~~~~~~~~~
 -[] Delete button shoe remove the employee salary from the monthly costs
