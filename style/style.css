@@ -1,0 +1,25 @@
+body{
+    width: 50%;
+}
+header{
+    background-color: silver;
+    text-align: center;
+}
+
+input{
+    margin: 1%;
+    width: 100px
+}
+
+.inputs{
+    display: flexbox;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    border: 2px solid black;
+    
+}
+
+.submitButton{
+    text-align: right;
+}
