@@ -17,9 +17,29 @@ input{
     align-content: space-between;
     justify-content: center;
     border: 2px solid black;
+    padding: 5px;
     
 }
 
 .submitButton{
+    text-align: right;
+}
+
+
+table, th, td{
+    border: 2px double black;
+    width: 600px;
+    height: 50px;
+}
+
+tr:nth-child(even){
+    background-color: lightgray;
+}
+
+th{
+    background-color: darkgray;
+}
+
+.totalSpent{
     text-align: right;
 }
