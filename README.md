@@ -3,51 +3,46 @@ Salary Calculator
 
 ## Description
 
-Duration: 2 Days
+This is my first weekend project for Emerging Digital Academy.
 
-This application takes in employee data and calculates the total monthly cost based on the employee's annual salary.
+This application takes in employee data and calculates the total monthly cost based on the employee's annual salary. 
 
-
-### Prerequisites
-
-- [jQuery](https://jquery.com/)
-
-
-## Installation
-
-How do you get your application up and running? This is a step by step list for how another developer could get this project up and running. The good target audience in terms of knowledge, would be a fellow Primer from another cohort being able to spin up this project. Note that you do not need a paragraph here to intro Installation. It should be step-by-step.
-
-If your application has secret keys (for example --  Twilio), make sure you tell them how to set that up, both in getting the key and then what to call it in the `.env` file.
-
-1. Create a database named `your database name`,
-2. The queries in the `tables.sql` file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries, 
-3. Open up your editor of choice and run an `npm install`
-4. Run `npm run server` in your terminal
-5. Run `npm run client` in your terminal
-6. The `npm run client` command will open up a new browser tab for you!
+Employee data is entered into the input fields and displayed on the page when the submit button is clicked. The total monthly cost is then calculated when an employee is added or removed from the list. The background of the total monthly cost will also change to red if the cost is over $20,000.
 
 ## Usage
-How does someone use this application? Tell a user story here.
+1. Enter your employee's Fist name, Last name, ID Number, Title, and Annual Salary into the appropriate fields.
+2. Click 'SUBMIT' to calculate that employee's monthly cost.
+3. Employee data will be displayed in the employee table.
+4. To remove an employee, click "DELETE" in the employee row. This will also update the total monthly cost.
 
-1. xxx
-2. xxx
-3. xxx
-4. xxx
-5. xxx
-6. xxx
+Total monthly cost will update with each added or removed employee.
 
+## To Do
+Below is the checklist I made to keep track of functionallity and goals:
 
-## Built With
+-[x] Make files
+-[x] link files
+-[x] set up HTML
+-[x] create form
+-[x] add submit button
 
-List technologies and frameworks here
+-[x] add jQuery inputs to the HTML
+-[x] take in employee data
+-[x] calculate monthly costs
+-[x] add data to DOM
+-[x] clear the input boxes
+-[x] red backgroud if over $20,000 dollars
+-[x] add delete button to employee info
+    -[x] remove employee from the DOM
+    
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+    ~~~~~~~~~*Stretch Goals*~~~~~~~~~~
+-[x] Delete button shoe remove the employee salary from the monthly costs
+-[x] Style in way that fits with the theme
 
-_Note, include this only if you have a license file. GitHub will generate one for you if you want!_
 
 ## Acknowledgement
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. (Thank your people)
+Thanks you to Emerging Digital Academy (www.emergingacademy.org) for teaching me the skills needed to complete this project.
 
 ## Support
-If you have suggestions or issues, please email me at [youremail@whatever.com](www.google.com)
+If you have suggestions or issues, please email me at jcolago2005@gmail.com
