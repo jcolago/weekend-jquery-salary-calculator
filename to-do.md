@@ -25,12 +25,12 @@ Take inputs from -employee first name, last name, ID number, job title, annual s
 -[x] add submit button
     -[x] add jQuery inputs to the HTML
     -[x] take in employee data
-    -[] calculate monthly costs
-    -[] add data to DOM
+    -[x] calculate monthly costs
+    -[x] add data to DOM
     -[x] clear the input boxes
-    -[] red backgroud if over $20,000 dollars
+    -[x] red backgroud if over $20,000 dollars
 -[x] add delete button to employee info
-    -[] remove employee from the DOM
+    -[x] remove employee from the DOM
     
 
     ~~~~~~~~~*Stretch Goals*~~~~~~~~~~

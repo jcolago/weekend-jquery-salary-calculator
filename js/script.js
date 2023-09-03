@@ -21,14 +21,15 @@ function onReady() {
 //This function will run when the submit bitton is clicked.
 function submitInfo() {
 
-    
+
     //Defines the variable data that will be listed to the DOM
-const firstName = $('#firstName').val();
-const lastName = $('#lastName').val();
-const idNumber = $('#idNumber').val();
-const title = $('#title').val();
-const annualSalary = $('#annualSalary').val();
-let monthlySpent = annualSalary/12;
+    const firstName = $('#firstName').val();
+    const lastName = $('#lastName').val();
+    const idNumber = $('#idNumber').val();
+    const title = $('#title').val();
+    const annualSalary = $('#annualSalary').val();
+    const monthlySpent = annualSalary / 12;
+    
 
 
     //Appends the HTML to add a table row with the entered input data and displays it on the DOM. Also adds a delete button to the row.
@@ -38,11 +39,11 @@ let monthlySpent = annualSalary/12;
         <td>${lastName}</td>
         <td>${idNumber}</td>
         <td>${title}</td>
-        <td id="currentSalary">$ ${annualSalary}</td>
+        <td class="salary">${annualSalary}</td>
         <td><button id="deleteButton">Delete</button></td>
         </tr>`)
-        $('#deleteButton').css('text-align', 'center');
-//Empties the input fields.
+    $('#deleteButton').css('text-align', 'center');
+    //Empties the input fields.
     $('#firstName').val("");
     $('#lastName').val("");
     $('#idNumber').val("");
@@ -50,18 +51,21 @@ let monthlySpent = annualSalary/12;
     $('#annualSalary').val("");
 
     //This takes the monthlySpent and adds it to the total spent. This also displays the total spending for the month on the DOM
-     totalSpent += Number(monthlySpent);
-  $('#monthlyTotal').text(totalSpent.toFixed(2));
-//If totalSpent is over $20,000, the background will turn red.
-  if(totalSpent >= 20000){
-    $('#monthlyTotal').css('background-color', 'red');
-  }
+    totalSpent += Number(monthlySpent);
+    $('#monthlyTotal').text(totalSpent.toFixed(2));
+    //If totalSpent is over $20,000, the background will turn red.
+    if (totalSpent >= 20000) {
+        $('#monthlyTotal').css('background-color', 'red');
+    }
 
 }
 
 //This will delete the row of employee info when delete is clicked.
-function deleteEmployee(event){
- $(event.target).closest('#employee').remove();
+function deleteEmployee(event) {
+    const employeeCost = Number($(event.target).closest("tr").find("td.salary").text()/12);
+     totalSpent -= employeeCost;
+    $('#monthlyTotal').text(totalSpent.toFixed(2))
+    $(event.target).closest('#employee').remove();
 }
 
 
