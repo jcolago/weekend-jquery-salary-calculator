@@ -74,9 +74,9 @@ function deleteEmployee(event) {
     $('#monthlyTotal').text(totalSpent.toFixed(2))
     //This will delete the employee information row
     $(event.target).closest('#employee').remove();
-    //Changes the backgroung of the total monthly cost field to white while less than $20000.
+    //Changes the backgroung of the total monthly cost field to none while less than $20000.
     if(totalSpent <= 20000){
-    $('#monthlyTotal').css('background-color', 'white');  
+    $('#monthlyTotal').css('background-color', '');  
     }
 }
 
