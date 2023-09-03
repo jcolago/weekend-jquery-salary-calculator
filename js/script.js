@@ -30,6 +30,11 @@ function submitInfo() {
     const annualSalary = $('#annualSalary').val();
     const monthlySpent = annualSalary / 12;
     
+    //Guard statement that alerts the user that an input was left blank.
+    if(!firstName || !lastName || !idNumber || !title || !annualSalary){
+        alert('Please fill out all fields with proper values.')
+        return;
+    }
 
 
     //Appends the HTML to add a table row with the entered input data and displays it on the DOM. Also adds a delete button to the row.
@@ -60,12 +65,19 @@ function submitInfo() {
 
 }
 
-//This will delete the row of employee info when delete is clicked.
+//This will run when the delete button is clicked
 function deleteEmployee(event) {
+
+//This section will calculate the monthly cost of an employee and then subract that amount from the total monthly costs. It will then update the DOM with the new total
     const employeeCost = Number($(event.target).closest("tr").find("td.salary").text()/12);
      totalSpent -= employeeCost;
     $('#monthlyTotal').text(totalSpent.toFixed(2))
+    //This will delete the employee information row
     $(event.target).closest('#employee').remove();
+    //Changes the backgroung of the total monthly cost field to white while less than $20000.
+    if(totalSpent <= 20000){
+    $('#monthlyTotal').css('background-color', 'white');  
+    }
 }
 
 
